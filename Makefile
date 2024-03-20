@@ -34,7 +34,7 @@ count:
 
 install: libmis.so
 	install -d build/lib
-	intall -m 644 libmis.so build/lib/
+	install -m 644 libmis.so build/lib/
 	install -d build/include
 	install -m 644 src/Jlwrapper.h build/include/
 
