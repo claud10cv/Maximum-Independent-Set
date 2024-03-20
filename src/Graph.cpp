@@ -660,18 +660,19 @@ uint32_t Graph::getEffectiveNodeMeasure(const uint32_t &bound) const {
     return measure;
 }
 
-bool Graph::getEffectiveNodeOrOptimalFunnel(uint32_t &effectiveNode, uint32_t &nodeV, uint32_t &nodeA) const {
+void Graph::getEffectiveNodeOrOptimalFunnel(uint32_t &effectiveNode, uint32_t &nodeV, uint32_t &nodeA) const {
     effectiveNode = nodeV = nodeA = NONE;
     uint32_t measure = getEffectiveNodeMeasure();
     vector<Funnel> funnels;
     Funnel fourFunnel;
     if (getFunnels(funnels, &measure, &effectiveNode, &fourFunnel)) {
         if (effectiveNode != NONE) {
-            return true;
+            // return true;
+            ;
         } else {
             nodeV = fourFunnel.v;
             nodeA = fourFunnel.a;
-            return true;
+            // return true;
         }
     } else {
         for (uint32_t i = 0 ; i < 3 ; i++) {
@@ -704,7 +705,7 @@ bool Graph::getEffectiveNodeOrOptimalFunnel(uint32_t &effectiveNode, uint32_t &n
                 if (optimal) {
                     nodeV = fourFunnel.v;
                     nodeA = fourFunnel.a;
-                    return true;
+                    // return true;
                 }
             }
         }

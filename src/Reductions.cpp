@@ -121,7 +121,7 @@ bool Reductions::removeDominatedNodes(const uint32_t &theta) {
     return true;
 }
 
-bool Reductions::removeDominatedNodes2(const uint32_t &theta) {
+void Reductions::removeDominatedNodes2(const uint32_t &theta) {
     for (uint32_t pos1 = 0 ; pos1 < graph.nodeIndex.size() ; pos1++) {
         if (!graph.nodeIndex[pos1].edges || graph.nodeIndex[pos1].removed || theta == 3 && graph.nodeIndex[pos1].edges != 1) {
             continue;

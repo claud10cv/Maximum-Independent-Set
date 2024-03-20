@@ -69,7 +69,7 @@ public:
     bool getSeparatingPairs(std::unordered_set<uint32_t> &vertexCut, std::vector<uint32_t> &component1, std::vector<uint32_t> &component2, bool &actualComponent1) const;
     bool getSeparatingTriplets(std::unordered_set<uint32_t> &vertexCut, std::vector<uint32_t> &component1, std::vector<uint32_t> &component2, bool &actualComponent1) const;
     uint32_t getOptimalNodeTheta3(const uint32_t initialMaxDegreeNode, const uint32_t &initialMaxDegree) const;
-    bool getEffectiveNodeOrOptimalFunnel(uint32_t &effectiveNode, uint32_t &nodeV, uint32_t &nodeA) const;
+    void getEffectiveNodeOrOptimalFunnel(uint32_t &effectiveNode, uint32_t &nodeV, uint32_t &nodeA) const;
     bool get4CycleTheta3(std::vector<uint32_t> &optimalCycle) const;
     uint32_t getEffectiveNodeMeasure(const uint32_t &bound = NONE) const;
     bool isInTriangle(const uint32_t &node) const;
@@ -157,7 +157,7 @@ public:
     }
 
     template <typename Container, typename ContainerRemoved = std::vector<uint32_t> >
-    bool gatherNeighborsWithRemoved(const uint32_t &node, Container &neighbors, ContainerRemoved &removedNeighbors) const {
+    void gatherNeighborsWithRemoved(const uint32_t &node, Container &neighbors, ContainerRemoved &removedNeighbors) const {
         uint32_t pos = (!mapping ? node : idToPos->at(node));
         uint32_t nextNodeOffset = (pos == nodeIndex.size()-1 ? edgeBuffer->size() : nodeIndex[pos+1].offset);
         for (uint32_t offset = nodeIndex[pos].offset ; offset < nextNodeOffset ; offset++) {
