@@ -33,8 +33,8 @@ count:
 	wc -l src/*.cpp src/*.hpp
 
 install: libmis.so
-	install -d build/lib
-	install -m 644 libmis.so build/lib/
-	install -d build/include
-	install -m 644 src/*.hpp build/include/
+	install -d ${libdir}
+	install -m 555 libmis.so ${libdir}/
+	install -d ${includedir}
+	install -m 644 src/*.hpp ${includedir}/
 
