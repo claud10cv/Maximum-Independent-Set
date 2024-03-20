@@ -36,3 +36,10 @@ clean:
 
 count:
 	wc -l src/*.cpp src/*.hpp
+
+install: libmis.so
+	install -d build/lib
+	install -m 555 libmis.so build/lib/
+	install -d build/include
+	install -m 644 src/Jlwrapper.h build/include/
+

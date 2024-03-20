@@ -1,4 +1,4 @@
-#include "jlcxx/jlcxx.hpp"
+#include "Jlwrapper.h"
 #include "Alg.hpp"
 
 static void max_indep_set(jlcxx::ArrayRef<int> _src, jlcxx::ArrayRef<int> _dst, jlcxx::ArrayRef<int> _sol)
