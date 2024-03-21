@@ -1,0 +1,1 @@
+/usr/bin/g++ -fPIC -shared -Wl,-soname,libmis.so -o libmis.so CMakeFiles/mis.dir/Graph.cpp.o CMakeFiles/mis.dir/Reductions.cpp.o CMakeFiles/mis.dir/Alg.cpp.o CMakeFiles/mis.dir/Mis.cpp.o CMakeFiles/mis.dir/Util.cpp.o 
