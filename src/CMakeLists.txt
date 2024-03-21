@@ -11,6 +11,10 @@ SET(libname mis)
 #find_package(PCL 1.2 REQUIRED)
 #FIND_PACKAGE(MRPT REQUIRED base;bayes;obs;gui)
 
+SET( CMAKE_CXX_FLAGS_DEBUG  "-g")
+SET( CMAKE_CXX_FLAGS_RELEASE  "-O3")
+SET( CMAKE_CXX_FLAGS  "-Ofast -std=c++17 -march=native -fpic -ftree-vectorize")
+
 # here we specify the additional include directories for the project. These files come in additional include directories option of VC++
 # project.
 # either the variable values from package like ${PCL_INCLUDE_DIRS} or absolute paths as shown in second and third line may be used.
