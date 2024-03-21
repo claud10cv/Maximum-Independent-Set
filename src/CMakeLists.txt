@@ -5,8 +5,8 @@ SET( CMAKE_CXX_FLAGS_DEBUG  "-g")
 SET( CMAKE_CXX_FLAGS_RELEASE  "-O3")
 SET( CMAKE_CXX_FLAGS  "-std=c++17 -D__STDC_FORMAT_MACROS")
 
-set_target_properties(mis PROPERTIES PUBLIC_HEADER "Alg.hpp")
 add_library (mis SHARED Graph.cpp Reductions.cpp Alg.cpp Mis.cpp Util.cpp Graph.hpp Reductions.hpp Alg.hpp Mis.hpp Util.hpp)
+set_target_properties(mis PROPERTIES PUBLIC_HEADER "Alg.hpp")
 install(TARGETS mis
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
