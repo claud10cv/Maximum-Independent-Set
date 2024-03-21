@@ -1,9 +1,0 @@
-{
-    "makefile.launchConfigurations": [
-        {
-            "cwd": "/home/ccontard/git/Maximum-Independent-Set",
-            "binaryPath": "/home/ccontard/git/Maximum-Independent-Set/mis",
-            "binaryArgs": [],
-        }
-    ]
-}
