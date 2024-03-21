@@ -13,7 +13,7 @@ SET(libname mis)
 
 SET( CMAKE_CXX_FLAGS_DEBUG  "-g")
 SET( CMAKE_CXX_FLAGS_RELEASE  "-O3")
-SET( CMAKE_CXX_FLAGS  "-std=c++17")
+SET( CMAKE_CXX_FLAGS  "-std=c++17 -D__STDC_FORMAT_MACROS")
 
 # here we specify the additional include directories for the project. These files come in additional include directories option of VC++
 # project.
