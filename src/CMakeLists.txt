@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 project(MaximumIndependentSet)
 
-find_package(JLCxx REQUIRED)
+find_package(JlCxx REQUIRED)
 
 SET(libname mis)
 SET( CMAKE_CXX_FLAGS_DEBUG  "-g")
