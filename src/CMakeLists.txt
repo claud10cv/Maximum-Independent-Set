@@ -49,4 +49,8 @@ add_library (mis SHARED Graph.cpp Reductions.cpp Alg.cpp Mis.cpp Util.cpp Graph.
 #${MRPT_LIBS} # This is filled by FIND_PACKAGE(MRPT ...)
 #"" # Optional extra libs...
 #)
+
+install(TARGETS mis
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 # End of CMakeLists.Txt file. Save it as a plain text file and the name should be exactly CMakeLists.Txt
