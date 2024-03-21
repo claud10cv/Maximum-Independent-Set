@@ -45,7 +45,7 @@ add_library (mis SHARED Graph.cpp Reductions.cpp Alg.cpp Mis.cpp Util.cpp Graph.
 # Note that first parameter is the executable name.
 #target_link_libraries (MyApp ${PCL_LIBRARIES} libeng.lib libmx.lib libmex.lib libmat.lib Aria.lib winmm.lib wsock32.lib)
 # Add the required libraries for linking:
-TARGET_LINK_LIBRARIES(${libname}
+#TARGET_LINK_LIBRARIES(${libname}
 #${MRPT_LIBS} # This is filled by FIND_PACKAGE(MRPT ...)
 "" # Optional extra libs...
 )
