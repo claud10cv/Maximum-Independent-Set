@@ -1,6 +1,8 @@
 #include "Mis.hpp"
 #include <iostream>
 #include <cinttypes>
+#include <inttypes.h>
+
 using namespace std;
 
 string Mis::misOutputFile = ".mis";
