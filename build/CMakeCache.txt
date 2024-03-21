@@ -219,7 +219,7 @@ MaximumIndependentSet_BINARY_DIR:STATIC=${builddir}
 MaximumIndependentSet_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-MaximumIndependentSet_SOURCE_DIR:STATIC=${srcdir}
+MaximumIndependentSet_SOURCE_DIR:STATIC=${srcdir}/src
 
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=${builddir}
@@ -228,7 +228,7 @@ Project_BINARY_DIR:STATIC=${builddir}
 Project_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-Project_SOURCE_DIR:STATIC=${srcdir}
+Project_SOURCE_DIR:STATIC=${srcdir}/src
 
 //Dependencies for the target
 libmis_LIB_DEPENDS:STATIC=general;;
@@ -323,7 +323,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=${srcdir}
+CMAKE_HOME_DIRECTORY:INTERNAL=${srcdir}/src
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
