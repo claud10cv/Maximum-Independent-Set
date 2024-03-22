@@ -87,7 +87,7 @@ void Alg::run() {
         } else {
             if (i < minCompletedSearchNode) {
                 minCompletedSearchNode = i;
-                cout << i << endl;
+                // cout << i << endl;
             }
             SearchNode *parent = searchTree[i];
             if (parent->hasCut) {
@@ -118,7 +118,7 @@ void Alg::run() {
         }
         i = *nextChild;
     }
-    cout << searchNodes << " search nodes\n";
+    // cout << searchNodes << " search nodes\n";
     searchTree[0]->graph.collectZeroDegreeNodes();
     //cout << "Final id " << searchTree[0]->id;
     // Mis::print(*searchTree[0]->finalMis);
