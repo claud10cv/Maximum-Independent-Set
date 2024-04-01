@@ -1,7 +1,7 @@
 #include "Jlwrapper.h"
 #include "Alg.hpp"
 
-static void max_indep_set(jlcxx::ArrayRef<int> _src, jlcxx::ArrayRef<int> _dst, jlcxx::ArrayRef<int> _sol)
+static void max_indep_set_xn(jlcxx::ArrayRef<int> _src, jlcxx::ArrayRef<int> _dst, jlcxx::ArrayRef<int> _sol)
 {
     int nnodes = std::max(*std::max_element(std::begin(_src), std::end(_src)), *std::max_element(std::begin(_dst), std::end(_dst)));
     std::vector<uint32_t> src;
@@ -20,7 +20,7 @@ static void max_indep_set(jlcxx::ArrayRef<int> _src, jlcxx::ArrayRef<int> _dst, 
     // std::cout << "obtained solution of size " << sol.size() << std::endl;
     return;
 }
-JLCXX_MODULE define_julia_module(jlcxx::Module& mod)
+JLCXX_MODULE define_julia_module_xn(jlcxx::Module& mod)
 {
-  mod.method("max_indep_set", &max_indep_set);
+  mod.method("max_indep_set_xn", &max_indep_set_xn);
 }
